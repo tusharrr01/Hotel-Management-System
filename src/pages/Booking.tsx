@@ -151,7 +151,7 @@ const Booking = () => {
                   </div>
                   {hotel.type && hotel.type.length > 0 && (
                     <div className="flex flex-wrap gap-1">
-                      {hotel.type.map((type, index) => (
+                      {hotel.type.map((type: string, index: number) => (
                         <Badge
                           key={index}
                           variant="outline"

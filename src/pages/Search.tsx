@@ -2,6 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import useSearchContext from "../hooks/useSearchContext";
 import { useQueryWithLoading } from "../hooks/useLoadingHooks";
 import * as apiClient from "../api-client";
+import type { HotelType } from "@shared/types";
 import { useEffect, useState } from "react";
 import SearchResultsCard from "../components/SearchResultsCard";
 import Pagination from "../components/Pagination";
@@ -225,7 +226,7 @@ const Search = () => {
           ) : (
             <>
               {hotelData?.data.map(
-                (hotel: import("../../../shared/types").HotelType) => (
+                (hotel: HotelType) => (
                   <SearchResultsCard key={hotel._id} hotel={hotel} />
                 )
               )}

@@ -273,7 +273,7 @@ const MyHotels = () => {
                   <BsBuilding className="w-4 h-4 text-primary-600 flex-shrink-0" />
                   <div className="flex flex-wrap gap-1 min-h-[24px]">
                     {Array.isArray(hotel.type) ? (
-                      hotel.type.map((type, index) => (
+                      hotel.type.map((type: string, index: number) => (
                         <Badge
                           key={index}
                           variant="outline"

@@ -105,7 +105,7 @@ const Detail = () => {
         {/* Hotel Types */}
         {hotel.type && hotel.type.length > 0 && (
           <div className="flex flex-wrap gap-2 mt-4">
-            {hotel.type.map((type, index) => (
+            {hotel.type.map((type: string, index: number) => (
               <Badge
                 key={index}
                 variant="outline"
@@ -259,7 +259,7 @@ const Detail = () => {
       <div className="border border-slate-300 rounded-lg p-4">
         <h3 className="text-xl font-semibold mb-3">Facilities</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {hotel.facilities.map((facility) => (
+          {hotel.facilities.map((facility: string) => (
             <div key={facility} className="flex items-center gap-2">
               <div className="w-4 h-4 text-green-600">
                 {facility === "Free WiFi" && <Wifi className="w-4 h-4" />}

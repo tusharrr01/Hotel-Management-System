@@ -1,6 +1,6 @@
 import { useQueryWithLoading } from "../hooks/useLoadingHooks";
 import * as apiClient from "../api-client";
-import type { BookingType, HotelWithBookingsType } from "../../../shared/types";
+import type { BookingType, HotelWithBookingsType } from "@shared/types";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import {
@@ -110,7 +110,7 @@ const MyBookings = () => {
   const totalSpent = hotels.reduce((total, hotel) => {
     return (
       total +
-      hotel.bookings.reduce((hotelTotal, booking) => {
+      hotel.bookings.reduce((hotelTotal: number, booking: any) => {
         const checkInDate = new Date(booking.checkIn);
         const checkOutDate = new Date(booking.checkOut);
         const nights = Math.max(
