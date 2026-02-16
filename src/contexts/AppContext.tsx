@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 import * as apiClient from "../api-client";
  
 import { useToast } from "../hooks/use-toast";
-import { UserType } from "../../../shared/types";
+import { UserType } from "@shared/types";
 
 
 type ToastMessage = {

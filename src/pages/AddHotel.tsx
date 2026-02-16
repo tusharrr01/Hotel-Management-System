@@ -3,13 +3,6 @@ import { useNavigate } from "react-router-dom";
 import ManageHotelForm from "../forms/ManageHotelForm/ManageHotelForm";
 import useAppContext from "../hooks/useAppContext";
 import * as apiClient from "../api-client";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "../components/ui/card";
-import { AlertCircle, ShieldAlert } from "lucide-react";
 import { useQueryClient } from "react-query";
 
 const AddHotel = () => {

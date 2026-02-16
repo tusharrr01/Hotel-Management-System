@@ -1,8 +1,14 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import { resolve } from "path";
 
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      "@shared/types": resolve(__dirname, "../shared/types.ts"),
+    },
+  },
   // Dev proxy: forward `/api` calls to backend when running `vite` locally.
   // Set BACKEND_URL in your environment to override (e.g. http://localhost:5000)
   server: {

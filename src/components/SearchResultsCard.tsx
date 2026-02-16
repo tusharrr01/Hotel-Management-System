@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HotelType } from "../../../shared/types";
+import { HotelType } from "@shared/types";
 import { AiFillStar } from "react-icons/ai";
 import {
   MapPin,
@@ -84,7 +84,7 @@ const SearchResultsCard = ({ hotel }: Props) => {
                   </span>
                   <div className="flex flex-wrap gap-1">
                     {Array.isArray(hotel.type) ? (
-                      hotel.type.slice(0, 4).map((type) => (
+                      hotel.type.slice(0, 4).map((type: string) => (
                         <Badge
                           key={type}
                           variant="default"
@@ -147,7 +147,7 @@ const SearchResultsCard = ({ hotel }: Props) => {
               Key Amenities
             </h4>
             <div className="flex flex-wrap gap-2">
-              {hotel.facilities.slice(0, 6).map((facility) => {
+              {hotel.facilities.slice(0, 6).map((facility: string) => {
                 const IconComponent = getFacilityIcon(facility);
                 return (
                   <Badge

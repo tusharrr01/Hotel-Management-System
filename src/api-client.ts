@@ -8,7 +8,7 @@ import {
   UserType,
   HotelWithBookingsType,
   BookingType,
-} from "../../shared/types";
+} from "@shared/types";
 import { BookingFormData } from "./forms/BookingForm/BookingForm";
 import { queryClient } from "./main";
 

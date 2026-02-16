@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HotelType } from "../../../shared/types";
+import { HotelType } from "@shared/types";
 import { MapPin, Star, Users } from "lucide-react";
 import { Badge } from "./ui/badge";
 
@@ -62,7 +62,7 @@ const LatestDestinationCard = ({ hotel }: Props) => {
               {/* Hotel Types */}
               <div className="flex flex-wrap gap-1">
                 {Array.isArray(hotel.type) ? (
-                  hotel.type.slice(0, 3).map((type) => (
+                  hotel.type.slice(0, 3).map((type: string) => (
                     <Badge
                       key={type}
                       variant="outline"
